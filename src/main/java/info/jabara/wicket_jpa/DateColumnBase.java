@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jabaraster.wicket_jpa;
+package info.jabara.wicket_jpa;
 
 import jabara.bean.BeanProperties;
 import jabara.wicket.Models;

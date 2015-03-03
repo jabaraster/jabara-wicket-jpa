@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jabaraster.wicket_jpa;
+package info.jabara.wicket_jpa;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
