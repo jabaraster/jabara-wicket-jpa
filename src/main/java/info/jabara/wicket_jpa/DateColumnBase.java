@@ -38,6 +38,22 @@ public class DateColumnBase<E> extends AttributeColumn<E> {
     }
 
     /**
+     * @param pLabel -
+     * @param pAttribute -
+     * @param pFormat -
+     */
+    @SuppressWarnings("unused")
+    public DateColumnBase( //
+            final IModel<String> pLabel //
+            , final Attribute<?, ? extends Comparable<?>> pAttribute //
+            , final String pFormat) {
+
+        super(pLabel, pAttribute);
+        this.format = pFormat;
+        new SimpleDateFormat(pFormat); // 書式の妥当性チェック
+    }
+
+    /**
      * @see org.apache.wicket.extensions.markup.html.repeater.data.table.PropertyColumn#getDataModel(org.apache.wicket.model.IModel)
      */
     @Override

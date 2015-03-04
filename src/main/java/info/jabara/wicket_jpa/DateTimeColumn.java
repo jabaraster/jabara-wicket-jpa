@@ -7,6 +7,8 @@ import jabara.bean.BeanProperties;
 
 import javax.persistence.metamodel.Attribute;
 
+import org.apache.wicket.model.IModel;
+
 /**
  * @param <E> 行の値を保持するオブジェクトの型.
  * @author jabaraster
@@ -23,12 +25,16 @@ public class DateTimeColumn<E> extends DateColumnBase<E> {
      * @param pMeta -
      * @param pAttribute -
      */
-    /**
-     * @param pMeta -
-     * @param pAttribute -
-     */
     public DateTimeColumn(final BeanProperties pMeta, final Attribute<?, ? extends Comparable<?>> pAttribute) {
         super(pMeta, pAttribute, FORMAT);
+    }
+
+    /**
+     * @param pLabel -
+     * @param pAttribute -
+     */
+    public DateTimeColumn(final IModel<String> pLabel, final Attribute<?, ? extends Comparable<?>> pAttribute) {
+        super(pLabel, pAttribute, FORMAT);
     }
 
 }
